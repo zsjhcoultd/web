@@ -12,11 +12,27 @@ body{background-color:#FFFFFF}
 </center>
 <h2>投稿系統2.0</h2>
 <form action="/action_page.php">
-  <label for="fname"></label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="button" value="Submit" src="index.html">
+	<label for="請問你要投稿還是刪除投稿？">請問你要投稿還是刪除投稿？</label>
+  <br><br>
+  <input type="radio" id="投稿" name="請問你要投稿還是刪除投稿？"><label for="投稿">投稿</label>
+  <br><br>
+  <input type="radio" id="刪除投稿" name="請問你要投稿還是刪除投稿？"><label for="刪除投稿">刪除投稿</label>
+  <br><br>
+<input id="one-checkbox" type="checkbox" value="我已詳細閱讀使用者規約並同意遵守"/> 我已詳細閱讀使用者規約並同意遵守
+<button id="button">送出</button>
+
+<script>
+    $("body").on("click","#button", function(){
+        if( $("#one-checkbox").prop("checked") ){ // 回傳布林值
+            alert( "你是"+$("#one-checkbox").val() );
+        } else {
+            alert( "你不是"+$("#one-checkbox").val() );
+        }
+    });
+</script>
 </form>
+<hr>
+ </body>
+</html>
 </body>
 </html>
