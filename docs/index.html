@@ -4,36 +4,60 @@
 </head>
 <style type="text/css">
 h1{background-color:#000000;color:#DE89BE ;}
-body{background-color:#FFdf7}
+body{background-color:#FFFFFF}
 </style>
 <body>
 <center>
   <h1>靠北/告白中山股份無限公司</h1>
 </center>
 <h2>投稿系統2.0</h2>
-<form action="/index.html">
-	<label for="請問你要投稿還是刪除投稿？">請問你要投稿還是刪除投稿？</label>
-  <br><br>
-  <input type="radio" id="投稿" name="請問你要投稿還是刪除投稿？"><label for="投稿">投稿</label>
-  <br><br>
-  <input type="radio" id="刪除投稿" name="請問你要投稿還是刪除投稿？"><label for="刪除投稿">刪除投稿</label>
-  <br><br>
-<input id="one-checkbox" type="checkbox" value="我已詳細閱讀使用者規約並同意遵守"/> 我已詳細閱讀使用者規約並同意遵守
-<br><br>
-<button id="button">送出</button>
-
-<script>
-    $("form").on("click","#button", 
-    function(){
-        if( $("#投稿").prop("checked") )
-        	{ alert( "你是"+$("#投稿").val() );} 
-    	else 
-    		{alert( "你不是"+$("#刪除投稿").val() );}
-    });
-</script>
-</form>
 <hr>
- </body>
-</html>
+<form action="javascript:GoogleForm();" id="form">
+		<fieldset>請問你要投稿還是刪除投稿？
+		<br><br>
+		<input type="radio" name="請問你要投稿還是刪除投稿？"><label for="投稿">投稿</label>
+		<br><br>
+		<input type="radio" name="請問你要投稿還是刪除投稿？"><label for="刪除投稿">刪除投稿</label>
+		</fieldset>
+		<fieldset>請先閱讀使用者規約
+		<br><br>
+		<input type="checkbox" name="我已詳細閱讀使用者規約並同意遵守"><label for="投稿">我已詳細閱讀使用者規約並同意遵守</label>
+		</fieldset>
+
+		<button type="submit">送出</button>
+		</form>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.min.js"></script>
+		<script>
+		function GoogleForm() {　//這裡要對應到自己的 javascript 名稱
+		   //宣告欄位
+		   var field1 = $("[name='請問你要投稿還是刪除投稿？']").val();
+		   var field2 = $("[name='我已詳細閱讀使用者規約並同意遵守']").val();
+
+
+		   $.ajax({
+		    url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScr3cJGVS1OyocRp4LzR8FgD8x8f43NIbfNK9yxB3ubQOGiQg/formResponse",
+
+		    data: {
+
+		     "entry.57664328":field1,
+		     "entry.231861993":field2
+		    },
+		    type: "POST",
+		    dataType: "xml",
+		    statusCode: {
+
+		     0: function() {
+		      alert("已送出!");　//完成送出表單的警告視窗
+		      window.location.assign("http://google.com");　//完成送出表單後的重新導向
+		     },
+
+		     200: function() {
+		      alert("已送出!");　//完成送出表單的警告視窗
+		      window.location.assign("http://google.com");　//完成送出表單後的重新導向
+		     }
+		    }
+		   });
+		  }
+		</script>
 </body>
 </html>
