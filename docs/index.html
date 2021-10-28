@@ -5,7 +5,16 @@
 <style type="text/css">
 h1{background-color:#000000;color:#DE89BE ;}
 body{background-color:#FFFFFF}
+.hide{display: none;}
+.show{display: block;}
 </style>
+		<script type="text/javascript">
+			$(function1(){
+				$("#繼續1").click(function(){
+					$('#提交').toggleclass("show");$('#繼續1').toggleclass("hide");
+			});
+		});
+		</script>
 <body>
 <center>
   <h1>靠北/告白中山股份無限公司</h1>
@@ -13,21 +22,50 @@ body{background-color:#FFFFFF}
 <h2>投稿系統2.0</h2>
 <hr>
 <form action="javascript:GoogleForm();" id="form">
-		<fieldset>請問你要投稿還是刪除投稿？
-		<br><br>
+		<fieldset><legend>請問你要投稿還是刪除投稿？</legend>
 		<input type="radio" name="請問你要投稿還是刪除投稿？"><label for="請問你要投稿還是刪除投稿？">投稿</label>
 		<br><br>
 		<input type="radio" name="請問你要投稿還是刪除投稿？"><label for="請問你要投稿還是刪除投稿？">刪除投稿</label>
 		</fieldset>
-		<fieldset>請先閱讀使用者規約
+
+		<fieldset><legend>請先閱讀使用者規約</legend>
+		<input type="button" value="使用者規約" onclick="location.href='https://zsjhcoultd.github.io/web/userregulation.html'">
+		 &nbsp;&nbsp; 
+		<input type="button" value="隱私權政策" onclick="location.href='https://zsjhcoultd.github.io/web/praviatepolicy.html'">
 		<br><br>
 		<input type="checkbox" name="我已詳細閱讀使用者規約並同意遵守"><label for="我已詳細閱讀使用者規約並同意遵守">我已詳細閱讀使用者規約並同意遵守</label>
 		</fieldset>
 		<br>
-		<button type="submit">送出</button>
+		<button id="繼續1" onclick="function1()">繼續</button>
+
+
+
+
+
+
+		<input id="提交" type="submit" value="Submit" class="hide" >
 		</form>
 
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 		<script>
 		function GoogleForm() {　
 		   
@@ -48,20 +86,18 @@ body{background-color:#FFFFFF}
 		    statusCode: {
 
 		     0: function() {
-		      alert("錯誤");　//完成送出表單的警告視窗
-		      window.location.assign("https://zsjhcoultd.github.io/home/");　//完成送出表單後的重新導向
+		      alert("0");　//完成送出表單的警告視窗
+		      window.location.assign("file:///D:/%E9%89%89%E6%8D%B7%E5%B0%88%E7%94%A8/%E5%A4%A7%E5%AD%B8/assignment%20%236.html");　//完成送出表單後的重新導向
 		     },
 
 		     200: function() {
-		      alert("已送出!");　//完成送出表單的警告視窗
-		      window.location.assign("https://zsjhcoultd.github.io/home/");　//完成送出表單後的重新導向
+		      alert("200");　//完成送出表單的警告視窗
+		      window.location.assign("file:///D:/%E9%89%89%E6%8D%B7%E5%B0%88%E7%94%A8/%E5%A4%A7%E5%AD%B8/assignment%20%236.html");　//完成送出表單後的重新導向
 		     }
 		    }
 		   });
 		  }
 		</script>
-<hr>
-	<a href="praviatepolicy.html">000</a>
 
 </body>
 </html>
