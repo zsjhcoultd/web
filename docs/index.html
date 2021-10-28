@@ -15,21 +15,22 @@ body{background-color:#FFFFFF}
 <form action="javascript:GoogleForm();" id="form">
 		<fieldset>請問你要投稿還是刪除投稿？
 		<br><br>
-		<input type="radio" name="請問你要投稿還是刪除投稿？"><label for="投稿">投稿</label>
+		<input type="radio" name="請問你要投稿還是刪除投稿？"><label for="請問你要投稿還是刪除投稿？">投稿</label>
 		<br><br>
-		<input type="radio" name="請問你要投稿還是刪除投稿？"><label for="刪除投稿">刪除投稿</label>
+		<input type="radio" name="請問你要投稿還是刪除投稿？"><label for="請問你要投稿還是刪除投稿？">刪除投稿</label>
 		</fieldset>
 		<fieldset>請先閱讀使用者規約
 		<br><br>
-		<input type="checkbox" name="我已詳細閱讀使用者規約並同意遵守"><label for="投稿">我已詳細閱讀使用者規約並同意遵守</label>
+		<input type="checkbox" name="我已詳細閱讀使用者規約並同意遵守"><label for="我已詳細閱讀使用者規約並同意遵守">我已詳細閱讀使用者規約並同意遵守</label>
 		</fieldset>
-
+		<br>
 		<button type="submit">送出</button>
 		</form>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>
-		function GoogleForm() {　//這裡要對應到自己的 javascript 名稱
-		   //宣告欄位
+		function GoogleForm() {　
+		   
 		   var field1 = $("[name='請問你要投稿還是刪除投稿？']").val();
 		   var field2 = $("[name='我已詳細閱讀使用者規約並同意遵守']").val();
 
@@ -47,17 +48,18 @@ body{background-color:#FFFFFF}
 		    statusCode: {
 
 		     0: function() {
-		      alert("已送出!");　//完成送出表單的警告視窗
-		      window.location.assign("http://google.com");　//完成送出表單後的重新導向
+		      alert("錯誤");　//完成送出表單的警告視窗
+		      window.location.assign("file:///D:/%E9%89%89%E6%8D%B7%E5%B0%88%E7%94%A8/%E5%A4%A7%E5%AD%B8/assignment%20%236.html");　//完成送出表單後的重新導向
 		     },
 
 		     200: function() {
 		      alert("已送出!");　//完成送出表單的警告視窗
-		      window.location.assign("http://google.com");　//完成送出表單後的重新導向
+		      window.location.assign("file:///D:/%E9%89%89%E6%8D%B7%E5%B0%88%E7%94%A8/%E5%A4%A7%E5%AD%B8/assignment%20%236.html");　//完成送出表單後的重新導向
 		     }
 		    }
 		   });
 		  }
 		</script>
+
 </body>
 </html>
