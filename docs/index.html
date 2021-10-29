@@ -2,7 +2,7 @@
 <head>
 <title>首頁</title>
 </head>
-<script src='https://www.google.com/recaptcha/api.js?render=6Lc5vHgUAAAAAKHxlH0FdDJdA2-8yfzpoMDLIWPc'></script>
+ <script src="https://www.google.com/recaptcha/api.js"></script>
 
 <style type="text/css">
 h1{background-color:#000000;color:#DE89BE ;font-size: 75px;}
@@ -169,58 +169,15 @@ laBEL{font-size: 40px;}
 		</script>
 
 
-		 <script>
-          grecaptcha.ready(function () {
-              console.log('1. grecaptcha.ready');
-              console.log('2. grecaptcha.execute("6Lc--wAdAAAAAHt0M-EBHw3edl8apLdY66hrDq1F", { action: "@Url.Action("VerifyBot", "Account")" })');
-                grecaptcha.execute('6Lc--wAdAAAAAHt0M-EBHw3edl8apLdY66hrDq1F', { action: '@Url.Action("VerifyBot", "Account")' }).then((token) => {
-                    console.log('3. Get token from reCAPTCHA service => ', token);
-                    console.log('4. Verifying Bot...');
-                    $.ajax({
-                        type: 'POST',
-                        url: '@Url.Action("VerifyBot", "Account")',
-                        data: { token: token },
-                        success: (res) => {
-                            console.log('5. Return => ', res);
-                        }
-                    });
-                });
-          });
-
-
-            public async Task<IActionResult> VerifyBot(string token)
-        {
-            using (var client = new HttpClient())
-            {
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                string url = string.Format(
-                    "https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}&remoteip={2}",
-                    "6Lc5vHgUAAAAAKAiwQ4IU17cme7WpCBFhO4kTRT7",
-                    token,
-                    this.httpContextAccessor.HttpContext.Connection.RemoteIpAddress.ToString());
-                HttpResponseMessage response = await client.GetAsync(url);
-                var data = await response.Content.ReadAsStringAsync();
-                if (response.IsSuccessStatusCode && BotRules(JsonConvert.DeserializeObject<ReCAPTCHA>(data))) return Ok(data);
-            }
-            return StatusCode((int)HttpStatusCode.InternalServerError, "Internal server error");
-        }
-        public bool BotRules(ReCAPTCHA data)
-        {
-            if (data.success && data.score>=0.5)  return true;
-           else  return false;
-        }
-        public class ReCAPTCHA
-        {
-          public bool success { get; set; }
-          public double score { get; set; }
-          public string action { get; set; }
-          public DateTime challenge_ts { get; set; }
-          public string hostname { get; set; }
-        }
-    </script>
-
-
+<script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+</script>
+<button class="g-recaptcha" 
+        data-sitekey="6Lc--wAdAAAAAHt0M-EBHw3edl8apLdY66hrDq1F" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
 
 </body>
 </html>
