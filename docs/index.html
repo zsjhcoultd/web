@@ -5,16 +5,9 @@
 <style type="text/css">
 h1{background-color:#000000;color:#DE89BE ;}
 body{background-color:#FFFFFF}
-.hide{display: none;}
-.show{display: block;}
+fieldset{border-radius:5px;border-width: 0px;background-color: #ebafaf;}
+legend{border-radius:5px;background-color: #b7e5f8;}
 </style>
-		<script type="text/javascript">
-			$(function1(){
-				$("#繼續1").click(function(){
-					$('#提交').toggleclass("show");$('#繼續1').toggleclass("hide");
-			});
-		});
-		</script>
 <body>
 <center>
   <h1>靠北/告白中山股份無限公司</h1>
@@ -23,30 +16,28 @@ body{background-color:#FFFFFF}
 <hr>
 <form action="javascript:GoogleForm();" id="form">
 		<fieldset><legend>請問你要投稿還是刪除投稿？</legend>
-		<input type="radio" name="請問你要投稿還是刪除投稿？"><label for="請問你要投稿還是刪除投稿？">投稿</label>
+		<input type="radio" name="Q1"><label for="Q1">投稿</label>
 		<br><br>
-		<input type="radio" name="請問你要投稿還是刪除投稿？"><label for="請問你要投稿還是刪除投稿？">刪除投稿</label>
+		<input type="radio" name="Q1"><label for="Q1">刪除投稿</label>
 		</fieldset>
-
+		<br>
 		<fieldset><legend>請先閱讀使用者規約</legend>
 		<input type="button" value="使用者規約" onclick="location.href='https://zsjhcoultd.github.io/web/userregulation.html'">
 		 &nbsp;&nbsp; 
 		<input type="button" value="隱私權政策" onclick="location.href='https://zsjhcoultd.github.io/web/praviatepolicy.html'">
 		<br><br>
-		<input type="checkbox" name="我已詳細閱讀使用者規約並同意遵守"><label for="我已詳細閱讀使用者規約並同意遵守">我已詳細閱讀使用者規約並同意遵守</label>
+		<input type="checkbox" name="Q2"><label for="Q2">我已詳細閱讀使用者規約並同意遵守</label>
 		</fieldset>
 		<br>
-		<button id="繼續1" onclick="function1()">繼續</button>
+		<input type="button" value="繼續" onclick="location.href='https://zsjhcoultd.github.io/web/praviatepolicy.html'">
 
 
 
 
 
 
-		<input id="提交" type="submit" value="Submit" class="hide" >
+		<input type="submit" value="Submit">
 		</form>
-
-
 
 		
 
@@ -63,23 +54,39 @@ body{background-color:#FFFFFF}
 
 
 
-
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 		<script>
 		function GoogleForm() {　
 		   
-		   var field1 = $("[name='請問你要投稿還是刪除投稿？']").val();
-		   var field2 = $("[name='我已詳細閱讀使用者規約並同意遵守']").val();
+		   var field1 = $("[name='Q1']").val();
+		   var field2 = $("[name='Q2']").val();
+		   var field3 = $("[name='Q3']").val();
+		   var field4 = $("[name='Q4']").val();
+		   var field5 = $("[name='Q5']").val();
+		   var field6 = $("[name='Q6']").val();
+		   var field7 = $("[name='Q7']").val();
+		   var field8 = $("[name='Q8']").val();
+		   var field9 = $("[name='Q9']").val();
+		   var field10 = $("[name='Q10']").val();
+		   var field11 = $("[name='Q11']").val();
 
 
 		   $.ajax({
-		    url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScr3cJGVS1OyocRp4LzR8FgD8x8f43NIbfNK9yxB3ubQOGiQg/formResponse",
+		    url: "https://docs.google.com/forms/d/e/1FAIpQLSdkQmqd7e1LC_uLEJjCER1e9m4ze-Uw8-9NNzZnmKgwecI1Zg/formResponse",
 
 		    data: {
 
 		     "entry.57664328":field1,
-		     "entry.231861993":field2
+		     "entry.231861993":field2,
+		     "entry.1984128521":field3,
+		     "entry.984840184":field4,
+		     "entry.161243096":field5,
+		     "entry.1420834802":field6,
+		     "entry.644088490":field7,
+		     "entry.207089377":field8,
+		     "entry.185725597":field9,
+		     "entry.787195154":field10,
+		     "entry.1208562366":field11,
 		    },
 		    type: "POST",
 		    dataType: "xml",
@@ -98,6 +105,6 @@ body{background-color:#FFFFFF}
 		   });
 		  }
 		</script>
-<a href="home.html">000</a>
+
 </body>
 </html>
