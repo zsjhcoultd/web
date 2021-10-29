@@ -19,7 +19,7 @@ legend{border-radius:5px;background-color: #EBC4D1;font-size: 30px;}
 <form action="javascript:GoogleForm();" id="form">
 		
 		<fieldset><legend> &nbsp;&nbsp; 請問你要投稿還是刪除投稿？ &nbsp;&nbsp; </legend>
-		<input type="radio" name="Q1" required><label for="Q1">投稿</label>
+		<input type="radio" name="Q1" required><label for="Q1" autofocus>投稿</label>
 		<br><br>
 		<input type="radio" name="Q1" required><label for="Q1">刪除投稿</label>
 		</fieldset>
@@ -37,7 +37,7 @@ legend{border-radius:5px;background-color: #EBC4D1;font-size: 30px;}
 		<BR><br>
 
 		<fieldset><legend> &nbsp;&nbsp; 請輸入後悔代碼 &nbsp;&nbsp; </legend>
-		<label for="Q3">後悔代碼；&nbsp;&nbsp;</label><input type="text" name="Q3" value="AAAAAAAA" required>
+		<label for="Q3">後悔代碼：&nbsp;&nbsp;</label><input type="text" name="Q3" value="AAAAAAAA" required>
 		</fieldset>
 
 		<br><br>
@@ -50,12 +50,50 @@ legend{border-radius:5px;background-color: #EBC4D1;font-size: 30px;}
 
 		<br><br>
 
+		<fieldset><legend> &nbsp;&nbsp; 您要回覆ZSJH__ __ __ __？ &nbsp;&nbsp; </legend>
+		<label for="Q5">後悔代碼；&nbsp;&nbsp;</label><input type="text" name="Q5" value="1234" maxlength="4">
+		</fieldset>
 
+		<br><br>
+
+		<fieldset><legend> &nbsp;&nbsp; 您的投稿內容是？&nbsp;&nbsp; </legend>
+		<label for="Q6">請輸入數字 &nbsp;&nbsp;</label><input type="text" name="Q6">
+		</fieldset>
+
+		<br><br>
+
+		<fieldset><legend> &nbsp;&nbsp; 請輸入後悔代碼 &nbsp;&nbsp; </legend>
+		<label for="Q7">後悔代碼：&nbsp;&nbsp;</label><input type="text" name="Q7" value="AAAAAAAA"  required>
+		</fieldset>
+
+		<br><br>
+
+		<fieldset><legend> &nbsp;&nbsp;是否進入滿意度調查？ &nbsp;&nbsp; </legend>
+		<input type="radio" name="Q8" required><label for="Q8">是</label>
+		<br><br>
+		<input type="radio" name="Q8" required><label for="Q8">否</label>
+		</fieldset>
+
+		<br><br>
+
+		<fieldset><legend> &nbsp;&nbsp;請問您的使用體驗如何？&nbsp;&nbsp; </legend>
+		<label for="Q9">0</label>
+		<input type="range" id="Q9" name="Q9" min="0" max="10">
+		<label for="Q9">10</label>
+		</fieldset>
+
+		<br><br>
+
+		<fieldset><legend> &nbsp;&nbsp;您的年齡&nbsp;&nbsp; </legend>
+		<label for="Q11">您的年齡：&nbsp;&nbsp;</label><input type="text" name="Q11" maxlength="2">
+		
+		<br><br>
 
 
 
 		<input type="submit" value="Submit">
-		</form>
+
+	</form>
 
 		
 
