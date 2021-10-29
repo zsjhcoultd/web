@@ -19,9 +19,9 @@ legend{border-radius:5px;background-color: #EBC4D1;font-size: 30px;}
 <form action="javascript:GoogleForm();" id="form">
 		
 		<fieldset><legend> &nbsp;&nbsp; 請問你要投稿還是刪除投稿？ &nbsp;&nbsp; </legend>
-		<input type="radio" name="Q1"><label for="Q1">投稿</label>
+		<input type="radio" name="Q1" required><label for="Q1">投稿</label>
 		<br><br>
-		<input type="radio" name="Q1"><label for="Q1">刪除投稿</label>
+		<input type="radio" name="Q1" required><label for="Q1">刪除投稿</label>
 		</fieldset>
 
 		<br><br>
@@ -31,15 +31,24 @@ legend{border-radius:5px;background-color: #EBC4D1;font-size: 30px;}
 		 &nbsp;&nbsp; 
 		<input type="button" value="隱私權政策" onclick="location.href='https://zsjhcoultd.github.io/web/praviatepolicy.html'">
 		<br><br>
-		<input type="checkbox" name="Q2"><label for="Q2">我已詳細閱讀使用者規約並同意遵守</label>
+		<input type="checkbox" name="Q2" required><label for="Q2">我已詳細閱讀使用者規約並同意遵守</label>
 		</fieldset>
 
-		<BR>
+		<BR><br>
 
 		<fieldset><legend> &nbsp;&nbsp; 請輸入後悔代碼 &nbsp;&nbsp; </legend>
-		<label for="Q3">後悔代碼；&nbsp;&nbsp;</label><input type="text" name="Q3" value="AAAAAAAA">
+		<label for="Q3">後悔代碼；&nbsp;&nbsp;</label><input type="text" name="Q3" value="AAAAAAAA" required>
 		</fieldset>
 
+		<br><br>
+
+		<fieldset><legend> &nbsp;&nbsp;是否進入滿意度調查？ &nbsp;&nbsp; </legend>
+		<input type="radio" name="Q4" required><label for="Q4">是</label>
+		<br><br>
+		<input type="radio" name="Q4" required><label for="Q4">否</label>
+		</fieldset>
+
+		<br><br>
 
 
 
