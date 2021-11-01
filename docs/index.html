@@ -2,7 +2,7 @@
 <head>
 <title>首頁</title>
 </head>
- <script src="https://www.google.com/recaptcha/api.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <meta charset="utf-8">
 <style type="text/css">
 h1{background-color:#000000;color:#DE89BE ;font-size: 75px;}
@@ -14,13 +14,28 @@ input{font-size: 40px;}
 laBEL{font-size: 40px;}
 #g-recaptcha{display:none;}
 </style>
-
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+      $(function show() {
+	$("#visible").click(function show() {
+	    $('#invisible').toggleClass("show");
+	  });  
+	});
+</script>
+<style>
+      .hide{display:none;}
+      .show{display:block;}
+</style>
 <body>
 <br><br>
 <center>
   <h1>靠北/告白中山股份無限公司</h1>
 </center>
 <h2>&nbsp;&nbsp;投稿系統2.0</h2>
+<hr>
+<br>
+
+    <br>
 <hr>
 	<br>
 <form action="javascript:GoogleForm();" id="form">
@@ -43,8 +58,13 @@ laBEL{font-size: 40px;}
 
 		<BR><br>
 
+<center><button id="visible">Click Here</button></center>
+
+
+<div id="invisible" class="hide">
 		<fieldset><legend> &nbsp;&nbsp; 請輸入後悔代碼 &nbsp;&nbsp; </legend>
-		<label for="Q3">後悔代碼：&nbsp;&nbsp;</label><input type="text" name="Q3" value="AAAAAA" required>
+		<label for="Q3">後悔代碼：&nbsp;&nbsp;</label>
+		<input type="text" name="Q3" value="AAAAAA" required>
 		</fieldset>
 
 		<br><br>
@@ -58,7 +78,8 @@ laBEL{font-size: 40px;}
 		<br><br>
 
 		<fieldset><legend> &nbsp;&nbsp; 您要回覆ZSJH__ __ __ __？ &nbsp;&nbsp; </legend>
-		<label for="Q5">後悔代碼；&nbsp;&nbsp;</label><input type="text" name="Q5" value="1234" maxlength="4">
+		<label for="Q5">後悔代碼；&nbsp;&nbsp;</label>
+		<input type="text" name="Q5" value="1234" maxlength="4">
 		</fieldset>
 
 		<br><br>
@@ -98,12 +119,11 @@ laBEL{font-size: 40px;}
 
 
 
-			<CENTER><button type="submit" FONT-SIZE:40PX>submit</button></center>
-
+			<CENTER><button type="submit" >submit</button></center>
+</div>
 	</form>
 
 		
-
 
 
 
@@ -156,13 +176,13 @@ laBEL{font-size: 40px;}
 		    statusCode: {
 
 		     0: function() {
-		      alert("0");　//完成送出表單的警告視窗
-		      window.location.assign("https://zsjhcoultd.github.io/web/");　//完成送出表單後的重新導向
+		      alert("0");　
+		      window.location.assign("https://zsjhcoultd.github.io/web/");
 		     },
 
 		     200: function() {
-		      alert("200");　//完成送出表單的警告視窗
-		      window.location.assign("https://zsjhcoultd.github.io/web/");　//完成送出表單後的重新導向
+		      alert("200");　
+		      window.location.assign("https://zsjhcoultd.github.io/web/");
 		     }
 		    }
 		   });
@@ -181,24 +201,23 @@ laBEL{font-size: 40px;}
         data-action='submit'>Submit</button>
  <script type="text/javascript">
         window.onload = function(){
-            //遮蔽鍵盤事件
+            
             document.onkeydown = function (){
                 var e = window.event || arguments[0];
-                //F12
+                
                 if(e.keyCode == 123){
                     return false;
-                //Ctrl+Shift+I
+                
             }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
                 return false;
-                //Shift+F10
+               
             }else if((e.shiftKey) && (e.keyCode == 121)){
                 return false;
-                //Ctrl+U
+               
             }else if((e.ctrlKey) && (e.keyCode == 85)){
                 return false;
             }
         };
-            //遮蔽滑鼠右鍵
             document.oncontextmenu = function (){
                 return false;
             }
