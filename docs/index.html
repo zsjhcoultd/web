@@ -5,8 +5,8 @@
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <meta charset="utf-8">
 <style type="text/css">
-h1{background-color:#fefdf7;color:#000000 ;font-size: 75px;}
-h2{font-size: 60px;color:#f7ddbf}
+h1{background-color:#fefdf7;color: #000000;font-size: 75px;}
+h2{font-size: 60px;color: #f7ddbf;}
 body{background-color:#fefdf7}
 fieldset{border-radius:10px;border-width: 2px;background-color:  #b7e5f8;width: 80%;margin-left: auto;margin-right: auto }
 legend{border-radius:5px;background-color:#ebafaf;font-size: 45px;color:#000000;border-width: 1px;border-color:#fefdf7}
@@ -21,6 +21,7 @@ laBEL{font-size: 40px;}
       $(function show() {
 	$("#visible").click(function show() {
 	    $('#invisible').toggleClass("show");
+	    $('#visible').toggleClass("hide");
 	  });  
 	});
 </script>
@@ -49,9 +50,11 @@ laBEL{font-size: 40px;}
 		<br><br>
 		
 		<fieldset><legend> &nbsp;&nbsp; 請先閱讀使用者規約 &nbsp;&nbsp; </legend>
+			<center>
 		<input type="button" value="使用者規約" onclick="location.href='https://zsjhcoultd.github.io/web/userregulation.html'">
-		 &nbsp;&nbsp; 
+		 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<input type="button" value="隱私權政策" onclick="location.href='https://zsjhcoultd.github.io/web/praviatepolicy.html'">
+	</center>
 		<br><br>
 		<input type="checkbox" name="Q2" value="我已詳細閱讀使用者規約並同意遵守" required><label for="Q2">我已詳細閱讀使用者規約並同意遵守</label>
 		</fieldset>
